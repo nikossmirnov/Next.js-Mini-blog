@@ -31,7 +31,7 @@ export default function Posts({ posts: serverPosts }: PostsPageProps) {
         return prev.id > current.id ? prev : current;
     });
 
-    const lastPostId = lastPost.id + 1;
+    const lastPostId = String(lastPost.id + 1);
 
     useEffect(() => {
         localStorage.setItem("id", lastPostId);

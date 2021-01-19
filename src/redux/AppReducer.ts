@@ -1,7 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { MyPost } from "../../interfaces/post";
 
-const initialState = {};
+const initialState = {
+    current_post: {},
+};
 
 export const appSlice = createSlice({
     name: "app",

@@ -3,17 +3,14 @@ import { createWrapper, MakeStore, Context } from "next-redux-wrapper";
 import appReducer from "./AppReducer";
 import { getDefaultMiddleware } from "@reduxjs/toolkit";
 
-export interface State {
-    tick: string;
-}
 const middleware = getDefaultMiddleware({
     thunk: true,
 });
-const makeStore: MakeStore<State> = (context: Context) =>
+const makeStore: MakeStore = (context: Context) =>
     configureStore({
         reducer: {
             app: appReducer,
         },
         middleware,
     });
-export const wrapper = createWrapper<State>(makeStore, { debug: true });
+export const wrapper = createWrapper(makeStore, { debug: true });

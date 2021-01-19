@@ -46,7 +46,7 @@ export default function Posts({ posts: serverPosts }: PostsPageProps) {
             <ul>
                 {postsToDisplay.map((post) => (
                     <div key={post.id}>
-                        <SimpleCard id={post.id} post={post} />
+                        <SimpleCard post={post} />
                     </div>
                 ))}
             </ul>

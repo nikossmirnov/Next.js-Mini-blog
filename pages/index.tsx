@@ -39,9 +39,6 @@ export default function Posts({ posts: serverPosts }: PostsPageProps) {
 
     return (
         <div>
-            <Head>
-                <title>Posts Page | Next Course</title>
-            </Head>
             <h1>Posts Page</h1>
             <ul>
                 {postsToDisplay.map((post) => (
